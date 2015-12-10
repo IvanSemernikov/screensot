@@ -23,14 +23,14 @@ var controller = (function () {
             return result;
         },
         hasLinkSrc: function (element) {
-            return element.innerHTML.indexOf($this.startTag) > 0
+            return element.id.contains('error') && element.innerHTML.indexOf($this.startTag) > 0;
         },
         addLink: function (element, getter) {
             var text = element.innerHTML;
-            
+
             var start = text.indexOf($this.startTag),
                 end = text.substring(start).indexOf($this.endTag) + $this.endTag.length;
-           
+
             var before = text.substring(0, start),
                 after = text.substring(end);
 
