@@ -40,7 +40,7 @@ var controller = (function () {
             var before = text.substring(0, start),
                 after = text.substring(end);
 
-            element.innerHTML = before + after + getter(text.substring(start, end + 4));
+            element.innerHTML = before + after + getter(text.substring(start, end));
         },
 
         getLink: function (src) {
