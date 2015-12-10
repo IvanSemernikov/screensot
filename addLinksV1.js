@@ -29,7 +29,7 @@ var controller = (function () {
             var text = element.innerHTML;
 
             var start = text.indexOf($this.startTag),
-                end = text.substring(start).indexOf($this.endTag) + $this.endTag.length;
+                end = text.indexOf($this.endTag, start) + $this.endTag.length;
 
             var before = text.substring(0, start),
                 after = text.substring(end);
