@@ -23,7 +23,7 @@ var controller = (function () {
             return result;
         },
         hasLinkSrc: function (element) {
-            return element.id.contains('error') && element.innerHTML.indexOf($this.startTag) > 0;
+            return element.id.indexOf('error') >= 0 && element.innerHTML.indexOf($this.startTag) > 0;
         },
         addLink: function (element, getter) {
             var text = element.innerHTML;
