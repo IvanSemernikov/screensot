@@ -37,7 +37,7 @@ var controller = (function () {
             element.innerHTML = before + after + getter(text.substring(start, end));
         },
         getLink: function (src) {
-            return ' <a target="_blank" href="' + src.substring($this.startTag.length, src.length) + '">Screenshot</a>';
+            return '<a target="_blank" href="' + src.substring($this.startTag.length, src.length) + '">Screenshot</a>';
         }
     };
     return {
